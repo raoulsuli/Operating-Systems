@@ -1,0 +1,20 @@
+#Sulimovici Raoul-Renatto 331CB
+
+In cadrul temei, am citit inputul cuvant cu cuvant din fisier sau de la stdin.
+-> Fisierul HashMap.c contine implementarea pentru HashMap si operatiile specifice (put, get, initialize, free, remove)
+
+-> Fisierul helpers.c contine functii auxiliare pentru implementare: slice pentru a obtine un substring,
+cate o functie de procesare pentru fiecare directiva. Aceste functii vor parcurge inputul si vor inlocui inputul cu
+keyword-urile necesare din define-uri, include-uri sau cele pentru #if/#ifdef/#ifndef etc.
+
+-> Fisierul main.c va citi inputul, va apela aceste metode si va afisa la output textul procesat.
+
+Pentru citire am folosit fscanf, iar pentru scriere fputs.
+
+Pentru define-uri, am salvat in HashMap cheia si valoarea sau cheia si un string gol pentru cele care nu aveau valoare.
+
+Pentru directivele conditionale, am verificat conditiile respective si am afisat intr-un while doar partile care ne intereseaza.
+
+Pentru directivele de include, voi verifica daca fisierul exista in directorul curent. Daca da, voi scrie la output ce
+contine acest fisier.
+Daca nu, voi verifica existenta fisierelor din directoarele date ca cli args.

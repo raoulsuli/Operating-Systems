@@ -1,0 +1,10 @@
+build: libscheduler.dll
+
+libscheduler.dll: so_scheduler.obj
+	link /nologo /dll /out:libscheduler.dll /implib:libscheduler.lib so_scheduler.obj
+
+so_scheduler.obj: so_scheduler.c
+	cl /nologo /W4 /c /Foso_scheduler.obj so_scheduler.c
+					
+clean:
+	del /Q /F *.obj *libscheduler.dll libscheduler.lib
